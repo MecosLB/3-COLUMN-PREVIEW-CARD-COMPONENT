@@ -21,11 +21,22 @@
 
 body {
     min-height: 100vh;
+    padding: 5.5rem 1.5rem 0;
+    font-family: 'Lexend Deca', sans-serif;
     background-color: var(--very_light_gray);
+}
+
+h1,
+h2,
+h3 {
+    font-family: 'Big Shoulders Display', sans-serif;
+    text-transform: uppercase;
+    color: var(--very_light_gray);
 }
 
 p {
     font-size: .94rem;
+    color: var(--transparent_white);
 }
 
 img,
@@ -33,4 +44,78 @@ picture,
 svg {
     display: block;
     max-width: 100%;
+}
+
+.bg-orange {
+    background-color: var(--bright_orange);
+}
+
+.bg-cyan {
+    background-color: var(--dark_cyan);
+}
+
+.bg-dark-cyan {
+    background-color: var(--very_dark_cyan);
+}
+
+.options-section {
+    display: grid;
+    grid-template-columns: 1fr;
+    max-width: 57.5rem;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    margin: auto auto 5vh;
+}
+
+.options-section .card {
+    padding: 3rem 3rem 0;
+}
+
+.card>img {
+    margin-bottom: 2.3rem;
+}
+
+.card>h1,
+.card>h2,
+.card>h3 {
+    font-size: 2.5rem;
+    margin-bottom: 1.45rem;
+}
+
+.card>p {
+    line-height: 1.6rem;
+    margin-bottom: 1.3rem;
+}
+
+.card>button {
+    font-family: 'Lexend Deca', sans-serif;
+    font-weight: 500;
+    font-size: 0.94rem;
+    text-transform: capitalize;
+    background-color: var(--very_light_gray);
+    mix-blend-mode: screen;
+    border-radius: 2rem;
+    padding: 0.9rem 1.9rem;
+    margin-bottom: 2.9rem;
+}
+
+.card>button:hover {
+    cursor: pointer;
+    color: var(--very_light_gray);
+    background-color: transparent;
+    border: 0.15rem solid var(--very_light_gray);
+}
+
+@media(min-width: 980px) {
+    body {
+        padding: 10.6rem 0 0 0;
+    }
+
+    .options-section {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .card>p {
+        margin-bottom: 5rem;
+    }
 }
